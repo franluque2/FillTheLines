@@ -1,0 +1,37 @@
+{
+  "characters": [
+    "Alice",
+    "Bob",
+    "Charlie"
+  ],
+  "lines": [
+    {
+      "id": "NPC_Greeting_01",
+      "text": "Hello there, traveler! What brings you to these parts?"
+    },
+    {
+      "id": "NPC_Greeting_02",
+      "text": "Ah, another wanderer. You look like you've seen better days."
+    },
+    {
+      "id": "NPC_Quest_01",
+      "text": "I need someone brave enough to venture into the old keep. You up for it?"
+    },
+    {
+      "id": "NPC_Combat_01",
+      "text": "En garde! You'll regret crossing me!"
+    },
+    {
+      "id": "NPC_Combat_02",
+      "text": "Is that all you've got? I've fought tougher skeevers!"
+    },
+    {
+      "id": "NPC_Farewell_01",
+      "text": "Safe travels, friend. May the roads treat you kindly."
+    },
+    {
+      "id": "NPC_Idle_01",
+      "text": "Strange things have been happening around here lately..."
+    }
+  ]
+}

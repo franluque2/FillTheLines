@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FillTheLines — Voice Acting Booth</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <span class="logo">🎙 FillTheLines</span>
+    <div id="char-badge" class="char-badge" hidden>
+      Recording as <strong id="char-label"></strong>
+      <button id="btn-change-char" class="btn btn-ghost">← Change</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ── Character selection ── -->
+    <div class="view active" id="view-characters">
+      <p class="section-hint">Who are you recording as?</p>
+      <div id="character-grid"></div>
+    </div>
+
+    <!-- ── Lines recording ── -->
+    <div class="view" id="view-lines">
+      <div class="progress-wrap">
+        <span id="progress-text">0 / 0 lines recorded</span>
+        <div class="progress-track"><div id="progress-fill"></div></div>
+      </div>
+      <div id="lines-list"></div>
+    </div>
+  </main>
+
+  <div id="toast" role="alert" aria-live="assertive"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
