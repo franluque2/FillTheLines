@@ -219,6 +219,10 @@ function onRecordClick(lineId) {
 // ── Start recording ───────────────────────────────────────────────────────────
 async function startRecording(lineId) {
   try {
+    if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
+      toast('Microphone access requires a secure connection (HTTPS). Recording is only available over HTTPS or on localhost.', 'error');
+      return;
+    }
     const stream   = await navigator.mediaDevices.getUserMedia({ audio: true });
     const mimeType = pickMime();
     const recorder = new MediaRecorder(stream, mimeType ? { mimeType } : {});
