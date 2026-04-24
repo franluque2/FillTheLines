@@ -91,6 +91,8 @@ function renderLinesView() {
   list.innerHTML = '';
   for (const line of state.config.lines) {
     list.appendChild(buildRow(line));
+    refreshRecList(line.id);
+    refreshRowColor(line.id);
   }
   updateProgress();
 }
@@ -150,9 +152,6 @@ function buildRow(line) {
   recList.id        = recListId(line.id);
 
   row.append(top, recArea, recList);
-
-  refreshRecList(line.id);
-  refreshRowColor(line.id);
   return row;
 }
 
